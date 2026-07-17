@@ -34,11 +34,11 @@
   {:n/id "N5" :n/rule "No person/individual data"}]
 
  :actor/methods
- [{:method/id "busshi_edn" :method/file "methods/busshi_edn.cljc" :method/role "seed loader + classify"}
-  {:method/id "analyze"    :method/file "methods/analyze.cljc"    :method/role "analyze → datoms → render-datoms → coverage → render-report (+ bb CLI)"}
-  {:method/id "kotoba"     :method/file "methods/kotoba.cljc"     :method/role "Wave 2 (ADR-2606171000): content-addressed append-only OBSERVATION LEDGER (tx-cid/append-tx/read-log/verify-chain)"}
-  {:method/id "autorun"    :method/file "methods/autorun.cljc"    :method/role "Wave 2 (ADR-2606171000): deterministic idempotent-by-content heartbeat — analyze → append observation datoms on change (+ bb CLI)"}
-  {:method/id "ie_flow"    :method/file "methods/ie_flow.cljc"    :method/role "SoS score (ADR-2606212200): embeds shared etzhayyim.ie-flow.metrics — observation → measured flow events (commodity multigen-risk rectified into resilience routes) → order-index/score in the SoS scoreboard; OBSERVATION-ONLY; record-flow! to 80-data/ie-flow/busshi/ (gitignored)"}]
+ [{:method/id "busshi_edn" :method/var busshi.methods.busshi-edn/commodities :method/role "seed loader + classify"}
+  {:method/id "analyze" :method/var busshi.methods.analyze/analyze :method/role "analysis, datoms, coverage, and reports"}
+  {:method/id "kotoba" :method/var busshi.methods.kotoba/append-tx :method/role "actor membrane over the pinned kotoba.datom commit-DAG library"}
+  {:method/id "autorun" :method/var busshi.methods.autorun/beat :method/role "deterministic idempotent-by-content heartbeat"}
+  {:method/id "ie_flow" :method/var busshi.methods.ie-flow/contract-state :method/role "pinned ie-flow adapter and EDN scoreboard contract"}]
 
  :actor/lex
  [{:lex/id "commodityObservation"}
@@ -57,8 +57,7 @@
   :ledger/idempotent-by-content true
   :ledger/note "Generated observation ledger of resilience observations; tamper-evident (verify-chain); no-server-key; appends only on change; a record of concentration OBSERVATIONS, never a target-list."}
 
- :actor/tests
- {:runner "babashka"
-  :cmd "./20-actors/busshi/run_tests.sh"
-  :suites ["methods/test_busshi_edn.cljc" "methods/test_analyze.cljc"
-           "methods/test_kotoba.cljc" "methods/test_autorun.cljc"]}}
+ :actor/contracts "repository-contracts.edn"
+ :actor/outputs [{:output/id :ie-flow-state :output/file "out/ie-flow-state.edn" :output/format :edn}
+                 {:output/id :commodity-analysis :output/file "out/analysis.edn" :output/format :edn}]
+ :actor/tests {:runner "babashka" :cmd "./run_tests.sh" :discovery "test/**/*_test.cljc"}}

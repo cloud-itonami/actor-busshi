@@ -7,7 +7,7 @@
             [clojure.string :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
-(def seed-path "20-actors/busshi/kotoba/seed.edn")
+(def seed-path "kotoba/seed.edn")
 (defn- cs [] (be/commodities seed-path))
 (defn- by-id [id] (first (filter #(= id (:id %)) (cs))))
 

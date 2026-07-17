@@ -244,7 +244,7 @@
 
 #?(:clj
    (defn -main [& args]
-     (let [seed (or (first args) "20-actors/busshi/kotoba/seed.edn")
+     (let [seed (or (first args) "kotoba/seed.edn")
            cs (be/commodities seed)
            a (analyze cs)
            cov (coverage cs)]

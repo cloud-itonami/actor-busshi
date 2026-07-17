@@ -9,7 +9,7 @@
             [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 
-(def seed "20-actors/busshi/kotoba/seed.edn")
+(def seed "kotoba/seed.edn")
 (defn- tmp [] (str (System/getProperty "java.io.tmpdir") "/busshi-autorun-test-" (gensym) ".edn"))
 (defn- commodities [] (be/commodities seed))
 

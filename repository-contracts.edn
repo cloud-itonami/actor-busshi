@@ -1,0 +1,24 @@
+{:contracts/version 1
+ :contracts
+ [{:contract/id :kotoba/commit-dag
+   :repository "https://github.com/etzhayyim/com-etzhayyim-kotoba-datom"
+   :revision "3c4b3b92234e59ba285119fd8b2ca4c2ee172ff8"
+   :namespace kotoba.datom}
+  {:contract/id :ie-flow/gate-adapter
+   :repository "https://github.com/etzhayyim/com-etzhayyim-ie-flow"
+   :revision "35d36d912c9596dbc5094947b60202d9abdf61e6"
+   :namespace etzhayyim.ie-flow.gate-adapter}
+  {:contract/id :social/publication
+   :repository "https://github.com/etzhayyim/com-etzhayyim-social-publication"
+   :revision "e8127d0661284b1c12ce1b216c84b5ed2db619ab"
+   :namespace etzhayyim.social.publication}
+  {:contract/id :ie-flow/state
+   :artifact "out/ie-flow-state.edn"
+   :consumer "etzhayyim/root:etzhayyim.ie-flow.scoreboard"
+   :override-env "BUSSHI_FLOW_STATE_PATH"
+   :format :edn}
+  {:contract/id :commodity/analysis
+   :artifact "out/analysis.edn"
+   :consumer "etzhayyim/root:ugachi.methods.bridge"
+   :override-env "BUSSHI_ANALYSIS_PATH"
+   :format :edn}]}

@@ -5,7 +5,7 @@
   (:require [busshi.methods.busshi-edn :as be]
             [clojure.test :refer [deftest is run-tests]]))
 
-(def seed-path "20-actors/busshi/kotoba/seed.edn")
+(def seed-path "kotoba/seed.edn")
 
 (deftest parse-edn-roundtrips
   (let [rows (be/parse-edn "[{:type :commodity :id \"x\" :class :energy}]")]

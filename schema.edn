@@ -1,8 +1,8 @@
-;; 20-actors/busshi/schema.edn — Datomic/Datascript 互換スキーマ定義
+;; busshi/schema.edn — Datomic/Datascript 互換スキーマ定義
 ;; (自動生成 — busshi actor-local, Phase 4 fan-out, 2026-07-10).
 ;; :db/ident 属性定義のリスト。Datomic 固有キー(:db.install/_attribute 等)は使わない。
 ;; 手編集禁止 — kotoba/seed.edn または kotoba/ontology.busshi.edn を再変換したら再生成する。
-;; 対象外(manifest.edn): 70-tools/src/etzhayyim/ の5共有ツールがbare-map前提で読むため
+;; 対象外(manifest.edn): actor metadata is not a Datomic schema transaction
 ;; 未変換のまま(shared-infra patch 待ち)。kotoba.app.edn も未変換(外部 kotoba CLI の
 ;; 読み取り仕様を本checkoutで監査できないため保留)。
 

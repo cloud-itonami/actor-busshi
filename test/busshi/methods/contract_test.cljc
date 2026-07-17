@@ -1,0 +1,22 @@
+#!/usr/bin/env bb
+(ns busshi.methods.test-contract
+  (:require [busshi.methods.busshi-edn :as busshi-edn]
+            [busshi.methods.analyze :as analyze]
+            [busshi.methods.ie-flow :as ie-flow]
+            [clojure.edn :as edn]
+            [clojure.test :refer [deftest is run-tests]]))
+
+(deftest committed-contract-is-fresh
+  (is (= (ie-flow/contract-state (busshi-edn/commodities "kotoba/seed.edn"))
+         (edn/read-string (slurp "out/ie-flow-state.edn")))))
+
+(deftest committed-analysis-contract-is-fresh
+  (let [contract (edn/read-string (slurp "out/analysis.edn"))]
+    (is (= :busshi/commodity-analysis (:contract/id contract)))
+    (is (= (analyze/analyze (busshi-edn/commodities "kotoba/seed.edn"))
+           (:analysis contract)))))
+
+#?(:clj
+   (when (= *file* (System/getProperty "babashka.file"))
+     (let [{:keys [fail error]} (run-tests 'busshi.methods.test-contract)]
+       (System/exit (if (zero? (+ fail error)) 0 1)))))

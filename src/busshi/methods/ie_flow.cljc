@@ -51,6 +51,15 @@
 (defn flow-events [commodities] (ga/flow-events (config commodities)))
 (defn flow-state  [commodities] (ga/flow-state (config commodities)))
 
+(defn contract-state
+  "Stable EDN boundary consumed by repositories that score busshi without loading
+   actor implementation namespaces."
+  [commodities]
+  {:contract/id :busshi/ie-flow-state
+   :contract/version 1
+   :actor "busshi"
+   :state (flow-state commodities)})
+
 #?(:clj
    (defn record-flow!
      "Record busshi's measured ie-flow EVENTS to the shared per-actor ledger via the
@@ -61,7 +70,7 @@
 #?(:clj
    (defn -main [& args]
      (let [flags (set (filter #(str/starts-with? % "--") args))
-           seed (or (first (remove #(str/starts-with? % "--") args)) "20-actors/busshi/kotoba/seed.edn")
+           seed (or (first (remove #(str/starts-with? % "--") args)) "kotoba/seed.edn")
            commodities (be/commodities seed)
            st (flow-state commodities)]
        (println (iem/summary-line st))
