@@ -1,5 +1,10 @@
 # busshi (物資) — world commodity & raw-materials observatory
 
+Canonical repository: `cloud-itonami/actor-busshi`. This governed, resident
+observatory belongs to the Itonami public-operations plane. `etzhayyim/tamaki`
+owns the artificial-organism evolution loop; busshi only supplies bounded
+commodity-resilience observations to that wider ecology.
+
 **DID**: `did:web:etzhayyim.com:busshi` · **Namespace**: `com.etzhayyim.busshi.*`
 **ADR**: ADR-2606161730 (clj-native R0) · **Risk axis**: ADR-2606161700 (§2(l) v3.2)
 **Status**: R0 — clj-native, kotoba-Datom-native, tests green

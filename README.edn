@@ -1,0 +1,5 @@
+{:repo/id "cloud-itonami/actor-busshi"
+ :repo/aliases ["etzhayyim/com-etzhayyim-busshi"]
+ :repo/role :governed-executable-actor
+ :repo/execution :resident
+ :repo/boundary "Commodity and raw-material resilience observation only; Tamaki owns artificial-organism evolution."}
