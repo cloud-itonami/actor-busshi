@@ -2,7 +2,7 @@
 ;; busshi 物資 — observation-ledger persistence tests.
 ;; Run:  bb --classpath 20-actors 20-actors/busshi/methods/test_kotoba.cljc
 (ns busshi.methods.test-kotoba
-  (:require [busshi.methods.kotoba :as k]
+  (:require [kotoba.lang.text] [busshi.methods.kotoba :as k]
             [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 
@@ -16,7 +16,7 @@
   (is (= (k/tx-cid (d1) "") (k/tx-cid (d1) "")))
   (is (not= (k/tx-cid (d1) "") (k/tx-cid (d2) "")))
   (is (not= (k/tx-cid (d1) "") (k/tx-cid (d1) "bdeadbeef")))
-  (is (clojure.string/starts-with? (k/tx-cid (d1) "") "b")))
+  (is (kotoba.lang.text/starts-with? (k/tx-cid (d1) "") "b")))
 
 (deftest append-read-roundtrip
   (let [p (tmp)]
@@ -44,7 +44,7 @@
     (try
       (let [c1 (k/append-tx (k/make-tx (d1) "t1" "as1" "") p)]
         (k/append-tx (k/make-tx (d2) "t2" "as2" c1) p)
-        (spit p (clojure.string/replace (slurp p) ":critical" ":low"))
+        (spit p (kotoba.lang.text/replace (slurp p) ":critical" ":low"))
         (let [v (k/verify-chain p)]
           (is (not (:ok v)))
           (is (= 1 (:broken-at v)))))
