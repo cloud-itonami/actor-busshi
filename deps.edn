@@ -1,11 +1,11 @@
-{:path
+{:paths ["src"]
+ :deps
+ {
         ;; kotoba.lang.text, not clojure.string. Pinned as an explicit floor:
         ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
         ;; this repo silently rides whatever a sibling happens to name.
         io.github.kotoba-lang/text {:git/sha "73bdb13ae7a3d004b44bca08be03a3191157a38f"}
-       s ["src"]
- :deps
- {com.etzhayyim/kotoba-datom
+       com.etzhayyim/kotoba-datom
   {:git/url "https://github.com/etzhayyim/com-etzhayyim-kotoba-datom"
    :git/sha "3c4b3b92234e59ba285119fd8b2ca4c2ee172ff8"}
   com.etzhayyim/ie-flow
