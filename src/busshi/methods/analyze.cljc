@@ -18,7 +18,7 @@
         forecast point (no point-forecast attribute exists; mitooshi does dists).
     G5  aggregate-first — no precise mine coordinates; a RESILIENCE map, NEVER a
         target-list (the report says so, in those words)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [busshi.methods.busshi-edn :as be]))
 
 ;; ── pure analytics ───────────────────────────────────────────────────────────

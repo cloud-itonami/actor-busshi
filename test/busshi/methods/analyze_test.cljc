@@ -4,7 +4,7 @@
 (ns busshi.methods.test-analyze
   (:require [busshi.methods.busshi-edn :as be]
             [busshi.methods.analyze :as a]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def seed-path "kotoba/seed.edn")
