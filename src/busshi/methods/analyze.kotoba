@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — analyze → datoms → coverage (clj-native, pure stdlib).
 (ns busshi.methods.analyze
   "busshi 物資 — the observatory's analytical core (ADR-2606161730).

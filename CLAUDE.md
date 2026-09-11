@@ -63,13 +63,13 @@ Derived: `:busshi.obs/*`, `:busshi.class/*`.
 ## Run
 
 ```bash
-bb --classpath 20-actors 20-actors/busshi/methods/test_busshi_edn.cljc   # loader (3 tests)
-bb --classpath 20-actors 20-actors/busshi/methods/test_analyze.cljc      # analytics + invariants (9 tests / 55 assert)
-bb --classpath 20-actors 20-actors/busshi/methods/analyze.cljc           # print the resilience map
-bb --classpath 20-actors 20-actors/busshi/methods/autorun.cljc           # heartbeat → append observations to ledger
+kbb --classpath 20-actors 20-actors/busshi/methods/test_busshi_edn.cljc   # loader (3 tests)
+kbb --classpath 20-actors 20-actors/busshi/methods/test_analyze.cljc      # analytics + invariants (9 tests / 55 assert)
+kbb --classpath 20-actors 20-actors/busshi/methods/analyze.cljc           # print the resilience map
+kbb --classpath 20-actors 20-actors/busshi/methods/autorun.cljc           # heartbeat → append observations to ledger
 # SoS score (ADR-2606212200): observation → measured ie-flow events → order-index/score:
-bb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/busshi/methods/ie_flow.cljc          # flow-state
-bb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/busshi/methods/ie_flow.cljc --record # record to the SoS ledger (gitignored)
+kbb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/busshi/methods/ie_flow.cljc          # flow-state
+kbb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/busshi/methods/ie_flow.cljc --record # record to the SoS ledger (gitignored)
 ./20-actors/busshi/run_tests.sh                                          # 5 suites
 ```
 

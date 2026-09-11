@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — ie-flow embedding (the SoS scoring leg) via the shared gate-adapter.
 (ns busshi.methods.ie-flow
   "ie_flow.cljc — busshi 物資 embeds the information-energy flow lifecycle

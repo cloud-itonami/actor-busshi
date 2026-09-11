@@ -10,10 +10,10 @@
 ## Tests
 
 ```
-bb --classpath 20-actors 20-actors/busshi/methods/test_busshi_edn.cljc   # 3 tests / 9 assertions
-bb --classpath 20-actors 20-actors/busshi/methods/test_analyze.cljc      # 9 tests / 55 assertions
-bb --classpath 20-actors 20-actors/busshi/methods/test_kotoba.cljc       # 4 tests / 13 assertions (ledger)
-bb --classpath 20-actors 20-actors/busshi/methods/test_autorun.cljc      # 5 tests / 22 assertions (heartbeat + idempotency)
+kbb --classpath 20-actors 20-actors/busshi/methods/test_busshi_edn.cljc   # 3 tests / 9 assertions
+kbb --classpath 20-actors 20-actors/busshi/methods/test_analyze.cljc      # 9 tests / 55 assertions
+kbb --classpath 20-actors 20-actors/busshi/methods/test_kotoba.cljc       # 4 tests / 13 assertions (ledger)
+kbb --classpath 20-actors 20-actors/busshi/methods/test_autorun.cljc      # 5 tests / 22 assertions (heartbeat + idempotency)
 ```
 
 21 tests / 99 assertions green (incl. G1 no-trade, G3 no-signal/no-forecast, G5 not-a-target-list invariants).
