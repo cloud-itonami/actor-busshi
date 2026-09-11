@@ -38,7 +38,7 @@ de-monopolization, restoration}. Plus per-class aggregates + coverage gap workli
 ## Run
 
 ```bash
-bb --classpath 20-actors 20-actors/busshi/methods/analyze.cljc        # print resilience map
+kbb --classpath 20-actors 20-actors/busshi/methods/analyze.cljc        # print resilience map
 ./20-actors/busshi/run_tests.sh                                       # both clj test suites
 ```
 

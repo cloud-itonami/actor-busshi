@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 (ns busshi.methods.test-contract
   (:require [busshi.methods.busshi-edn :as busshi-edn]
             [busshi.methods.analyze :as analyze]

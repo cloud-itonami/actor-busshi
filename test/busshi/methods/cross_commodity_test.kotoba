@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — tests for the per-producer cross-commodity chokepoint lens.
-;; Run:  bb --classpath 20-actors 20-actors/busshi/methods/test_cross_commodity.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/busshi/methods/test_cross_commodity.cljc
 (ns busshi.methods.test-cross-commodity
   "Tests for cross-commodity-chokepoints — the per-producer cross-commodity view that surfaces the
   producer dominating the most (high-multigen-risk) commodities, the systemic §2(l) de-monopolization

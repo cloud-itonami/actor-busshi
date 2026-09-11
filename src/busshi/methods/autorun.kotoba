@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — autonomous heartbeat: analyze → append observations to the ledger.
 (ns busshi.methods.autorun
   "autorun.cljc — busshi 物資 deterministic, idempotent-by-content heartbeat

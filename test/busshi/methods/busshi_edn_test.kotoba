@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — loader/classifier tests.
-;; Run:  bb --classpath 20-actors 20-actors/busshi/methods/test_busshi_edn.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/busshi/methods/test_busshi_edn.cljc
 (ns busshi.methods.test-busshi-edn
   (:require [busshi.methods.busshi-edn :as be]
             [clojure.test :refer [deftest is run-tests]]))

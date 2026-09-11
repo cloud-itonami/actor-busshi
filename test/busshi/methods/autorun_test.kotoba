@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — heartbeat tests (analyze → persist → verify, idempotent-by-content).
-;; Run:  bb --classpath 20-actors 20-actors/busshi/methods/test_autorun.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/busshi/methods/test_autorun.cljc
 (ns busshi.methods.test-autorun
   (:require [busshi.methods.busshi-edn :as be]
             [busshi.methods.autorun :as ar]

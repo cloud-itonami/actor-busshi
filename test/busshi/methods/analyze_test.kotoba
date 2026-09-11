@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — analyze/datoms/coverage tests (incl. constitutional invariants).
-;; Run:  bb --classpath 20-actors 20-actors/busshi/methods/test_analyze.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/busshi/methods/test_analyze.cljc
 (ns busshi.methods.test-analyze
   (:require [busshi.methods.busshi-edn :as be]
             [busshi.methods.analyze :as a]

@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — ie-flow embedding tests (the SoS scoring leg).
-;; Run:  bb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/busshi/methods/test_ie_flow.cljc
+;; Run:  kbb -cp "20-actors:70-tools/src:20-actors/kotodama/src" 20-actors/busshi/methods/test_ie_flow.cljc
 (ns busshi.methods.test-ie-flow
   (:require [busshi.methods.busshi-edn :as be]
             [busshi.methods.ie-flow :as ief]

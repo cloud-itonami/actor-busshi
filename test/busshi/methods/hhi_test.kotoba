@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; busshi 物資 — validation of the Herfindahl–Hirschman concentration index.
-;; Run:  bb --classpath 20-actors 20-actors/busshi/methods/test_hhi.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/busshi/methods/test_hhi.cljc
 (ns busshi.methods.test-hhi
   "Validation of the Herfindahl–Hirschman concentration index (named-hhi) — the §2(l)
   multi-generational (子・孫) RISK-axis metric over named producer shares — which had no direct
