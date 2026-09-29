@@ -44,5 +44,5 @@ kbb --classpath 20-actors 20-actors/busshi/methods/analyze.cljc        # print r
 
 ## Constitutional
 
-Gates G1–G8 + non-goals N1–N5 in `manifest.edn`; full rationale in `CLAUDE.md` and
+Gates G1–G8 + non-goals N1–N5 in `manifest.edn`; full rationale in `AGENTS.md` and
 ADR-2606161730. Apache 2.0 + Charter Compliance Rider v3.2.
