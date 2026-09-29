@@ -1,4 +1,4 @@
-# cloud-itonami/actor-busshi — CLAUDE.md
+# cloud-itonami/actor-busshi — AGENTS.md
 
 Canonical repository: `https://github.com/cloud-itonami/actor-busshi`.
 The former `etzhayyim/com-etzhayyim-busshi` path is a compatibility redirect.
